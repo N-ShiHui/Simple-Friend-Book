@@ -1,14 +1,3 @@
-'''
-Learn about:
-1) Printing
-2) Inputting
-3) Commenting
-4) Debugging
-5) Name Errors
-6) Syntax Errors
-7) String Manipulation
-8) Variables
-'''
 namebook = {"name": [], "hobby": [], "age": []}
 
 while True:
