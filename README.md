@@ -7,3 +7,4 @@
 * View existing user information
 * Remove user information
 * Search user information
+* Edit user information
