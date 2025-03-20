@@ -1,7 +1,7 @@
 namebook = {"name": [], "hobby": [], "age": []}
 
 while True:
-    print("What would you like to do?\n1. Add new user\n2. Display current users\n3. Remove user\n4. Search user info\n5. Exit")
+    print("What would you like to do?\n1. Add new user\n2. Display current users\n3. Remove user\n4. Search user info\n5. Edit user info\n6. Exit")
 
     choice = input("Select your option:")
 
@@ -69,6 +69,32 @@ while True:
             print("No such existing user.")
 
     elif choice == '5':
+        if not namebook['name']:
+            print("No such existing user.")
+        else: 
+            for i, (name, hobby, age) in enumerate(zip(namebook['name'],
+                                                       namebook['hobby'],
+                                                       namebook['age'])):
+                print(f"{i}. {name}, Hobby: {hobby}, Age: {age}")
+            
+            try:
+                index = int(input("Enter the index of user: "))
+                if 0 <= index < len(namebook['name']):
+                    new_name = input("Enter new name: ")
+                    new_hobby = input("Enter new hobby: ")
+                    new_age = input("Enter new age: ")
+
+                    # Update user information
+                    namebook['name'][index] = new_name
+                    namebook['hobby'][index] = new_hobby
+                    namebook['age'][index] = new_age
+
+                    print("User updated successfully.")
+                else:
+                    print("Invalid index.")
+            except ValueError:
+                print("Please enter a valid number.")
+    elif choice == '6':
         # Exit the program
         print("Exiting the system. Goodbye!")
         break
