@@ -8,3 +8,5 @@
 * Remove user information
 * Search user information
 * Edit user information
+
+#### The features may be edited within the dictionary itself along with the use of functions in the choices.
